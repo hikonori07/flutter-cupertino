@@ -16,12 +16,13 @@ class ProductListTab extends StatelessWidget {
             CupertinoSliverNavigationBar(
               largeTitle: Text('Cupertino Store'),
             ),
-            SliverSafeArea(   // BEGINNING OF NEW CONTENT
+            SliverSafeArea(
+              // BEGINNING OF NEW CONTENT
               top: false,
               minimum: const EdgeInsets.only(top: 8),
               sliver: SliverList(
                 delegate: SliverChildBuilderDelegate(
-                      (context, index) {
+                  (context, index) {
                     if (index < products.length) {
                       return ProductRowItem(
                         product: products[index],
@@ -33,7 +34,7 @@ class ProductListTab extends StatelessWidget {
                   },
                 ),
               ),
-            )     // END OF NEW CONTENT
+            ) // END OF NEW CONTENT
           ],
         );
       },
